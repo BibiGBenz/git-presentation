@@ -5,7 +5,7 @@ interface calci
 	int sub(int a,int b);
 	int multi(int a,int b);
 }
-public class Demo{
+class Demo{
 	public int add(int a, int b)
 	{
 		return a+b;
@@ -19,16 +19,18 @@ public class Demo{
 		return a*b;
 	}
 }
-public class Driver
+class Driver
 {
 	public static void main(String[] args)
 	{
 		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the 1st number:");
 		int a=sc.nextInt();
+		System.out.println("Enter the 2nd number:");
 		int b=sc.nextInt();
 		Demo D=new Demo();
-		System.out.println(a+"+"+b+"="D.add(a,b));
-		System.out.println(a+"-"+b+"="D.sub(a,b));
-		System.out.println(a+"*"+b+"="D.multi(a,b));
+		System.out.println(a+"+"+b+"="+D.add(a,b));
+		System.out.println(a+"-"+b+"="+D.sub(a,b));
+		System.out.println(a+"*"+b+"="+D.multi(a,b));
 	}
 }
